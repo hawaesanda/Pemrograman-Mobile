@@ -1,0 +1,14 @@
+// Soal 1
+void main() {
+  for (int i = 0; i < 10; i++) {
+    print('hello ${i + 1}');
+  }
+}
+
+//Soal 2
+//Mengapa sangat penting untuk memahami bahasa pemrograman Dart sebelum kita menggunakan framework Flutter ? Jelaskan!
+//menguasai bahasa pemrograman dart sangat penting sebelum menggunakan framework flutter karena dart merupakan dasar pengembangan aplikasi dimana flutter dibangun diatas dart sehingga logika aplikasim UI, dan interaksi dalam flutter ditulis menggunakan dart, struktur dan sintak flutter memanfaatkan fitur dart seperti classes, function, async/await, dan null safety, meningkatkan efisiensi dalam memahami konsep dart dan pengeolahan memori yang membantu untuk menavigasi flutter dnengan lebih baik, serta memahami bagaimana kode dart bekerja membantu dalam proses debugging dan optimasi aplikasi. 
+
+//Soal 3
+//Rangkumlah materi dari codelab ini menjadi poin-poin penting yang dapat Anda gunakan untuk membantu proses pengembangan aplikasi mobile menggunakan framework Flutter.
+// Dart merupakan bahasa pemrograman yang kuat dan fleksibel sehingga sangat baik untuk pengembangan aplikasi lintas platform dengan flutter, serta memiliki tujuan umum dengan terus meningkatkan fitur-fiturnya, membuatnya lebih kekinian dan fleksibel. Dart memiliki fitur penting yaitu runtime systems, dart code libraries, dan garbage collectors. Eksekusi dart dibagi menjadi 2 mode yaitu komplikasi Just-In-time(JIT) dimana dart VM memuat dan mengkomplikasi kode sumber ke kode mesin asli (native), sedangkan komplikasi Ahead-Of-Time (AOT) dimana Dart VM dan kode Anda dikompilasi sebelumnya, VM bekerja lebih seperti sistem runtime Dart, yang menyediakan garbage collector dan metode-metode native dari Dart software development kit (SDK) pada aplikasi. Seperti kebanyakan bahasa modern, Dart menggunakan function dan method sebagai cara untuk memisahkan kode. Sebuah function atau method adalah potongan kode yang menerima beberapa data, eksekusi kode, dan kemudian mengembalikan beberapa data (return).   
