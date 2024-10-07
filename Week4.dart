@@ -37,6 +37,55 @@ void main(){
   //  Apa yang terjadi ? Jika terjadi error, silakan perbaiki namun tetap menggunakan ketiga variabel tersebut. Tambahkan elemen nama dan NIM Anda pada kedua variabel Set tersebut dengan dua fungsi berbeda yaitu .add() dan .addAll(). Untuk variabel Map dihapus, nanti kita coba di praktikum selanjutnya.
   // Jawab : Output yang dihasilkan dari names1 dan names 2 adalah Set<String> dan mencetak set kosong. Sedangkan names3 menghasilkan map kosong karena dideklarasikan sebagai map.
 
+  var gifts = {
+    // Key: Value
+    'first': 'partridge',
+    'second': 'turtledoves',
+    'fifth': 1
+  };
+
+  var nobleGases = {
+    2: 'helium',
+    10: 'neon',
+    18: 2,
+  };
+
+  print(gifts);
+  print(nobleGases);
+  // Silakan coba eksekusi (Run) kode pada langkah 1 tersebut. Apa yang terjadi? Jelaskan! Lalu perbaiki jika terjadi error.
+  // Jawab : Output yang dihasilkan adalah Map dengan key dan value yang telah dideklarasikan
+
+  var mhs1 = Map<String, String>();
+  gifts['first'] = 'partridge';
+  gifts['second'] = 'turtledoves';
+  gifts['fifth'] = 'golden rings';
+  
+  // Tambah elemen nama dan NIM kedalam gifts
+  gifts['name'] = 'Hawa Esanda';
+  gifts['NIM'] = '2241720079';
+
+  // Menambahkan nama dan NIM ke dalam mhs1
+  mhs1['name'] = 'Hawa Esanda';
+  mhs1['NIM'] = '2241720079';
+
+  var mhs2 = Map<int, String>();
+  nobleGases[2] = 'helium';
+  nobleGases[10] = 'neon';
+  nobleGases[18] = 'argon';
+
+  // Tambah elemen nama dan NIM kedalam nobleGases
+  nobleGases[1] = 'Hawa Esanda';
+  nobleGases[9] = '2241720079';
+
+  // Menambahkan nama dan NIM ke dalam mhs2
+  mhs2[1] = 'Hawa Esanda';
+  mhs2[2] = '2241720079';
+  
+  // Mencetak semua hasil
+  print('gifts: $gifts');
+  print('nobleGases: $nobleGases');
+  print('mhs1: $mhs1');
+  print('mhs2: $mhs2');
 }
 
 
