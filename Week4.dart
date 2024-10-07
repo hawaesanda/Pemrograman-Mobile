@@ -22,8 +22,8 @@ void main(){
   var halogens = {'fluorine', 'chlorine', 'bromine', 'iodine', 'astatine'};
   print(halogens);
 
-// // Silakan coba eksekusi (Run) kode pada langkah 1 tersebut. Apa yang terjadi? Jelaskan! Lalu perbaiki jika terjadi error.
-// // Jawab : Output yang dihasilkan adalah list dari halogens
+// Silakan coba eksekusi (Run) kode pada langkah 1 tersebut. Apa yang terjadi? Jelaskan! Lalu perbaiki jika terjadi error.
+// Jawab : Output yang dihasilkan adalah list dari halogens
    
    var names1 = <String>{};
    Set<String> names2 = {}; //this works, too
@@ -34,8 +34,8 @@ void main(){
    print(names1);
    print(names2);
    print(names3);
-//   //  Apa yang terjadi ? Jika terjadi error, silakan perbaiki namun tetap menggunakan ketiga variabel tersebut. Tambahkan elemen nama dan NIM Anda pada kedua variabel Set tersebut dengan dua fungsi berbeda yaitu .add() dan .addAll(). Untuk variabel Map dihapus, nanti kita coba di praktikum selanjutnya.
-//   // Jawab : Output yang dihasilkan dari names1 dan names 2 adalah Set<String> dan mencetak set kosong. Sedangkan names3 menghasilkan map kosong karena dideklarasikan sebagai map.
+  //  Apa yang terjadi ? Jika terjadi error, silakan perbaiki namun tetap menggunakan ketiga variabel tersebut. Tambahkan elemen nama dan NIM Anda pada kedua variabel Set tersebut dengan dua fungsi berbeda yaitu .add() dan .addAll(). Untuk variabel Map dihapus, nanti kita coba di praktikum selanjutnya.
+  // Jawab : Output yang dihasilkan dari names1 dan names 2 adalah Set<String> dan mencetak set kosong. Sedangkan names3 menghasilkan map kosong karena dideklarasikan sebagai map.
 
   var gifts = {
     // Key: Value
@@ -52,8 +52,8 @@ void main(){
 
   print(gifts);
   print(nobleGases);
-//   // Silakan coba eksekusi (Run) kode pada langkah 1 tersebut. Apa yang terjadi? Jelaskan! Lalu perbaiki jika terjadi error.
-//   // Jawab : Output yang dihasilkan adalah Map dengan key dan value yang telah dideklarasikan
+  // Silakan coba eksekusi (Run) kode pada langkah 1 tersebut. Apa yang terjadi? Jelaskan! Lalu perbaiki jika terjadi error.
+  // Jawab : Output yang dihasilkan adalah Map dengan key dan value yang telah dideklarasikan
 
   var mhs1 = Map<String, String>();
   gifts['first'] = 'partridge';
@@ -97,6 +97,30 @@ void main(){
   print(list1);
   var list3 = [0, ...?list1];
   print(list3.length);
+
+  // Tambahkan variabel list berisi NIM Anda menggunakan Spread Operators
+  var list4 = [1, 2, 3];  // List awal
+  var nimList = [2, 2, 4, 1, 7, 2, 0, 0, 7, 9];  // NIM kamu sebagai list angka
+  
+  // Menggabungkan list awal dengan nimList menggunakan spread operator
+  var combinedList = [...list, ...nimList];
+  
+  print(combinedList);  // Cetak list gabungan
+  print(combinedList.length);  // Cetak panjang list gabungan
+
+  bool promoActive = true;  // Deklarasi variabel promoActive true
+  // bool promoActive = false;  // Deklarasi variabel promoActive false
+  var nav = ['Home', 'Furniture', 'Plants', if (promoActive) 'outlet'];
+  print(nav);  // Cetak hasil nav
+
+  var login = 'Manager';
+  var nav2 = ['Home', 'Furniture', 'Plants', if (login case 'Manager') 'Inventory'];
+  print(nav2);
+
+  var listOfInts = [1, 2, 3];
+  var listOfStrings = ['#0', for (var i in listOfInts) '#$i'];
+  assert(listOfStrings[1] == '#1');
+  print(listOfStrings);
 }
 
 
