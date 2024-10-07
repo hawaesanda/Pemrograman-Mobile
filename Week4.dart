@@ -14,16 +14,16 @@ void main(){
 // Jawab : Pada langkah 1 program akan mencetak panjang list yaitu 3, kemudian mencetak elemen indeks 1 sebelum diubah yaitu 2, setelah dilakukan perubahan maka program akan mencetak elemen pada indeks 1 yaitu 1. Program ini menunjukan bagaimana list dapat diakses, dan bagaimana assert digunakan untuk memastikan kondisi tertentu dapat dipenuhi selama eksekusi program
 
 // Ubah kode pada langkah 1 menjadi variabel final yang mempunyai index = 5 dengan default value = null. Isilah nama dan NIM Anda pada elemen index ke-1 dan ke-2. Lalu print dan capture hasilnya.
-  final List<dynamic> list = List.filled(5, null);
-  list[1] = "Hawa Esanda";  
-  list[2] = "2241720079";   
-  print(list);  
+  // final List<dynamic> list = List.filled(5, null);
+  // list[1] = "Hawa Esanda";  
+  // list[2] = "2241720079";   
+  // print(list);  
 
   var halogens = {'fluorine', 'chlorine', 'bromine', 'iodine', 'astatine'};
   print(halogens);
 
-// Silakan coba eksekusi (Run) kode pada langkah 1 tersebut. Apa yang terjadi? Jelaskan! Lalu perbaiki jika terjadi error.
-// Jawab : Output yang dihasilkan adalah list dari halogens
+// // Silakan coba eksekusi (Run) kode pada langkah 1 tersebut. Apa yang terjadi? Jelaskan! Lalu perbaiki jika terjadi error.
+// // Jawab : Output yang dihasilkan adalah list dari halogens
    
    var names1 = <String>{};
    Set<String> names2 = {}; //this works, too
@@ -34,8 +34,8 @@ void main(){
    print(names1);
    print(names2);
    print(names3);
-  //  Apa yang terjadi ? Jika terjadi error, silakan perbaiki namun tetap menggunakan ketiga variabel tersebut. Tambahkan elemen nama dan NIM Anda pada kedua variabel Set tersebut dengan dua fungsi berbeda yaitu .add() dan .addAll(). Untuk variabel Map dihapus, nanti kita coba di praktikum selanjutnya.
-  // Jawab : Output yang dihasilkan dari names1 dan names 2 adalah Set<String> dan mencetak set kosong. Sedangkan names3 menghasilkan map kosong karena dideklarasikan sebagai map.
+//   //  Apa yang terjadi ? Jika terjadi error, silakan perbaiki namun tetap menggunakan ketiga variabel tersebut. Tambahkan elemen nama dan NIM Anda pada kedua variabel Set tersebut dengan dua fungsi berbeda yaitu .add() dan .addAll(). Untuk variabel Map dihapus, nanti kita coba di praktikum selanjutnya.
+//   // Jawab : Output yang dihasilkan dari names1 dan names 2 adalah Set<String> dan mencetak set kosong. Sedangkan names3 menghasilkan map kosong karena dideklarasikan sebagai map.
 
   var gifts = {
     // Key: Value
@@ -52,8 +52,8 @@ void main(){
 
   print(gifts);
   print(nobleGases);
-  // Silakan coba eksekusi (Run) kode pada langkah 1 tersebut. Apa yang terjadi? Jelaskan! Lalu perbaiki jika terjadi error.
-  // Jawab : Output yang dihasilkan adalah Map dengan key dan value yang telah dideklarasikan
+//   // Silakan coba eksekusi (Run) kode pada langkah 1 tersebut. Apa yang terjadi? Jelaskan! Lalu perbaiki jika terjadi error.
+//   // Jawab : Output yang dihasilkan adalah Map dengan key dan value yang telah dideklarasikan
 
   var mhs1 = Map<String, String>();
   gifts['first'] = 'partridge';
@@ -86,6 +86,17 @@ void main(){
   print('nobleGases: $nobleGases');
   print('mhs1: $mhs1');
   print('mhs2: $mhs2');
+
+  var list = [1, 2, 3];
+  var list2 = [0, ...list];
+  print(list);
+  print(list2);
+  print(list2.length);
+
+  var list1 = [1, 2, null];
+  print(list1);
+  var list3 = [0, ...?list1];
+  print(list3.length);
 }
 
 
