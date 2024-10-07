@@ -121,6 +121,31 @@ void main(){
   var listOfStrings = ['#0', for (var i in listOfInts) '#$i'];
   assert(listOfStrings[1] == '#1');
   print(listOfStrings);
+
+  var record = ('first', a: 2, b: true, 'last');
+  print('Record awal: $record');
+
+  (int, int) tukar((int, int) record) {
+  var (a, b) = record;
+  return (b, a);
+  }
+  // Deklarasi Record untuk tukar dua nilai integer
+  var recordInt = (10, 20);  // Record dengan dua nilai integer
+  print('Record sebelum ditukar: $recordInt');
+
+  var swappedRecord = tukar(recordInt);
+  print('Record setelah ditukar: $swappedRecord');
+  
+  // Record type annotation in a variable declaration:
+  (String, int) mahasiswa = ('Hawa Esanda', 2241720079);
+  print(mahasiswa);
+  
+  // var mahasiswa2 = ('first', a: 2, b: true, 'last');
+  var mahasiswa2 = ('first', a: 'Hawa Esanda', b: true, '2241720079');
+  print(mahasiswa2.$1); // Prints 'first'
+  print(mahasiswa2.a); // Prints 2
+  print(mahasiswa2.b); // Prints true
+  print(mahasiswa2.$2); // Prints 'last'
 }
 
 
