@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-// import 'basic_widgets/text_widget.dart';
-import 'basic_widgets/image_widget.dart'; 
+// import 'basic_widgets/loading_cupertino.dart'; 
+// import 'basic_widgets/fab_widget.dart'; 
 
 void main() {
   runApp(const MyApp());
+  // runApp(const FabWidget()); //untuk menjalankan fab
 }
 
 class MyApp extends StatelessWidget {
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
+        primarySwatch: Colors.red,
         // This is the theme of your application.
         //
         // TRY THIS: Try running your application with "flutter run". You'll see
@@ -30,10 +32,10 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+        // colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        // useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'My Increment App'),
     );
   }
 }
@@ -107,8 +109,10 @@ class _MyHomePageState extends State<MyHomePage> {
           // wireframe for each widget.
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            // const MyTextWidget(),
-            const MyImageWidget(),
+            // const LoadingCupertino(),
+            const Text(
+              'You have pushed the button this many times:',
+            ),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
@@ -116,11 +120,17 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
+      bottomNavigationBar: BottomAppBar(
+        child: Container(
+          height: 50.0,
+        ),
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
-        tooltip: 'Increment',
+        tooltip: 'Increment Counter',
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 }
